@@ -25,7 +25,7 @@ const signup_user = async (req, res, Next) => {
     });
     const data = await newUser.save();
     console.log(data);
-    return res.redirect("/auth/login");
+    return res.redirect("/login");
   } catch (error) {
     console.log(error.code);
     return res.render("signup", { error: error.code == 11000 ? "Duplicated users" : error.message});
@@ -48,7 +48,7 @@ const login_get= async  (req, res, Next) => {
     }
     const token = jwt.sign({ id: user._id }, 'secret');
     res.cookie('token', token);
-    return res.redirect('/auth/profile');
+    return res.redirect('/profile');
   } catch (error) {
     console.error(error.code);
     return res.redirect("login", { error: error.message });
@@ -66,7 +66,7 @@ const about_get = async (req, res, next) => {
 
 // logout section
 const logout = async (req, res, next) => {
-  return res.redirect('/auth/');
+  return res.redirect('/');
 };
 
 
@@ -91,7 +91,7 @@ const get_post = async (req, res,Next) => {
       });
       const newPost = await data.save();
       console.log(newPost);
-    return res.redirect('/auth/profile');
+    return res.redirect('/profile');
   } catch (error) {
     console.log(error);
     if (error) return res.render("create_post", {error: error.message});
