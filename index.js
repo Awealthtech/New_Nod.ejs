@@ -36,7 +36,7 @@ app.use(
   })
   );
 
-app.use("/auth", authRouter);
+app.use("/", authRouter);
 
 
 
