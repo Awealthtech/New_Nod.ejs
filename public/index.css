@@ -20,9 +20,11 @@ body{
       margin: 0;
       padding: 0;
     }
-  .index{
-    height: 70%;
-  }
+    body{
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+    }
 
     a {
       font-size: 10px;
