@@ -14,3 +14,24 @@ body{
     background-size: cover;
     height: 80%
 }
+/* mediaquerry */
+@media only screen and (max-width: 600px) {
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  .index{
+    height: 70%;
+  }
+
+    a {
+      font-size: 10px;
+    }
+  }
+  
+  /* mediaquerry */
+  @media only screen and (max-width: 400px) {
+    a {
+      font-size: 10px;
+    }
+  }

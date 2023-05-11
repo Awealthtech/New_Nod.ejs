@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body{
+  text-align: center;
+  row-gap: 20px;
+}
+
 
 /* mediaquerry */
 @media only screen and (max-width: 600px) {

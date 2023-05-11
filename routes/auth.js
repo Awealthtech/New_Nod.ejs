@@ -13,6 +13,8 @@ router.get('/about', authController.about_get);
 router.get('/profile', authController.profile);
 router.get('/post', authController.create_post);
 router.post('/post', authController.get_post);
+router.get('/forgot', authController.forget);
+router.post('/forgot', authController.reset);
 router.get('/logout', authController.logout);
 
 module.exports = router;

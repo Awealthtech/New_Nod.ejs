@@ -109,6 +109,14 @@ const profile =  async (req, res) => {
   }
 };
 
+const forget = (req, res, Next) => {
+  return res.render("forgot", { error: ""});
+};
+
+const reset = async (req, res, next) => {
+  return res.redirect('/login');
+};
+
 
 module.exports = {
   signup_user,
@@ -121,4 +129,6 @@ module.exports = {
   logout,
   index_get,
   about_get,
+  forget,
+  reset,
 };
