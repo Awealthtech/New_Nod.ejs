@@ -12,12 +12,12 @@
       <form action="/login" method="post">
         <h3>Please login below</h3>
         <p class="error"><%=error%></p>
-        Username:
+        <pre>Username:</pre>
         <input type="text" placeholder="Email" id="email" name="email" /><br />
-        Password:
+       <pre>Password:</pre> 
         <input type="password" placeholder="password" id="password" name="password" /><br />
         <button type="submit">login</button>
-        <p>forget password? <a href="/forgot">click here</a></p>
+        <pre>forget password? <a href="/forgot">click here</a></pre>
       </form>
       <%- include('./component/footer.ejs')%>
   </body>
